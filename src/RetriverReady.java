@@ -5,6 +5,14 @@ public class RetriverReady {
         StudentInformation student = new StudentInformation();
         student.Student();
         student.enroll();
+        student.viewBalance();
+        student.payBalance();
+        //System.out.println( student.toString());
+        student.showInfo();
+
+        //create n number of students
+
+
     }
 }
 
