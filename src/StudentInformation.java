@@ -15,8 +15,7 @@ public class StudentInformation {
        System.out.println("Please enter your name: ");
        this.firstName = userInput.nextLine();
 
-       System.out.println("Please enter your name: ");
-       this.lastName = userInput.nextLine();
+
 
        System.out.println("Hello, " + firstName + lastName);
 
