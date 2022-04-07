@@ -11,8 +11,14 @@ public class StudentInformation {
    private int courseCost = 1104;
 
    public void Student() {
-
-       System.out.println("MERGE CONFLICT");
+       Scanner userInput = new Scanner(System.in);
+       System.out.println("Please enter your name: ");
+       this.firstName = userInput.nextLine();
+       System.out.println("Please enter your name: ");
+       this.lastName = userInput.nextLine();
+       System.out.println("Hello, " + this.firstName + this.lastName);
+       System.out.println("Please enter your UMBC email: ");
+       this.studentEmail = userInput.nextLine();
    }
 
    public void enroll() {
