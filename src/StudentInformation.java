@@ -8,7 +8,7 @@ public class StudentInformation {
    private static String studentID;
    private String studentEmail;
    private String gradeYear;
-   private int courseCost = 1104 ;
+   private int courseCost = 1104;
 
    public void Student() {
        Scanner userInput = new Scanner(System.in);
@@ -49,6 +49,6 @@ public class StudentInformation {
        System.out.println("ENROLLED IN: " + courseName);
        System.out.println("TUITION BALANCE: " + totalBalance);
    }
-   
+
 }
 
