@@ -41,7 +41,7 @@ public class StudentInformation {
    public void enroll() {
        do {
            Scanner in = new Scanner(System.in);
-           System.out.println("Please Enter Which class you want to register for: (Q to quit)");
+           System.out.println("Please Enter Which class you want to register for: (q to quit)");
            String courseName = in.nextLine();
 
            if (!courseName.equals("q")) {
@@ -63,23 +63,29 @@ public class StudentInformation {
    }
 
    //pays student balance
-   public void payBalance(){
-       Scanner input = new Scanner(System.in);
-       System.out.println("Enter your payment: $");
-       int payment = input.nextInt();
-      //redirects if user put in amount that exceeds balance
-       if(payment > totalBalance){
-           System.out.println("The amount you have entered exceeds your balance. Please try again");
-           payBalance();
-       } else if(payment != input.nextInt()){
-           System.out.println("You have entered a invalid number. Please try again");
-           payBalance();
+   public void payBalance() {
+       try {
+           Scanner input = new Scanner(System.in);
+           System.out.println("Enter your payment: $");
+           int payment = input.nextInt();
+           //redirects if user put in amount that exceeds balance
+           if (payment > totalBalance) {
+               System.out.println("The amount you have entered exceeds your balance. Please try again");
+               payBalance();
+           } else if (payment != input.nextInt()) {
+               System.out.println("You have entered a invalid number. Please try again");
+               //payBalance();
+           }
+           totalBalance = totalBalance - payment;
+           System.out.println("Thank you for your payment of $" + payment);
+           viewBalance();
+       } catch (Exception e){
+           System.out.println("Something went wrong please try again");
+//           viewBalance();
+       } finally {
+           viewBalance();
        }
-       totalBalance = totalBalance - payment;
-       System.out.println("Thank you for your payment of $" + payment);
-       viewBalance();
    }
-
    // prints relevant info to console
     //TODO: showInfo(); not printing to console
     // Feel free to fix this bug
