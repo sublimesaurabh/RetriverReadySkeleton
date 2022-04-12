@@ -26,13 +26,18 @@ public class StudentInformation {
        Scanner userInput = new Scanner(System.in);
        System.out.println("Please enter your first name: ");
        this.firstName = userInput.nextLine();
+
        System.out.println("Please enter your last name: ");
        this.lastName = userInput.nextLine();
+
        System.out.println("Hello, " + this.firstName + this.lastName);
+
        System.out.println("Please enter your UMBC email: ");
        this.studentEmail = userInput.nextLine();
+
        System.out.println("What grade year are you?");
        this.gradeYear = userInput.nextLine();
+
        System.out.println("Please enter your student ID");
        this.studentID = userInput.nextLine();
    }
@@ -72,18 +77,15 @@ public class StudentInformation {
            if (payment > totalBalance) {
                System.out.println("The amount you have entered exceeds your balance. Please try again");
                payBalance();
-           } else if (payment != input.nextInt()) {
-               System.out.println("You have entered a invalid number. Please try again");
-               //payBalance();
-           }
+           } //
            totalBalance = totalBalance - payment;
            System.out.println("Thank you for your payment of $" + payment);
            viewBalance();
        } catch (Exception e){
            System.out.println("Something went wrong please try again");
-//           viewBalance();
-       } finally {
            viewBalance();
+       } finally {
+           //viewBalance();
        }
    }
    // prints relevant info to console

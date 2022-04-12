@@ -1,3 +1,7 @@
+// Saurabh Chapagain
+// April 7, 2022
+// s205@umbc.edu
+
 import java.util.Scanner;
 
 public class RetriverReady {
