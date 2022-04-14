@@ -5,14 +5,15 @@ import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class StudentInformation {
-   private static String firstName;
-   private static String lastName;
-   private static String courseName;
-   private static double totalBalance;
-   private static String studentID;
-   private String studentEmail;
-   private String gradeYear;
-   private static double courseCost = 1104;
+    protected static String [] courseNamesList = new String[7];
+    private static String firstName;
+    private static String lastName;
+    private static String courseName;
+    private static double totalBalance;
+    private static String studentID;
+    private String studentEmail;
+    private String gradeYear;
+    private static double courseCost = 1104;
 
    /*TODO: 4/7/22
     Course Cost needs to be expanded upon
@@ -44,10 +45,12 @@ public class StudentInformation {
 
 
    public void enroll() {
-       do {
+
+        do{
            Scanner in = new Scanner(System.in);
            System.out.println("Please Enter Which class you want to register for: (q to quit)");
            String courseName = in.nextLine();
+           //courseNamesList[i] = in.nextInt();
 
            if (!courseName.equals("q")) {
                courseName = courseName + "\n" + courseName;
