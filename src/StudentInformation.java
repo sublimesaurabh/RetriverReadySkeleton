@@ -14,6 +14,8 @@ public class StudentInformation {
     private String studentEmail;
     private String gradeYear;
     private static double courseCost = 1104;
+    //TODO: add in updated prices
+    private double fullTimeCost = 6309;
 
    /*TODO: 4/7/22
     Course Cost needs to be expanded upon
