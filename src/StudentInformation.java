@@ -86,7 +86,7 @@ public class StudentInformation {
            totalBalance = totalBalance - payment;
            System.out.println("Thank you for your payment of $" + payment);
            viewBalance();
-       } catch (Exception e){
+       } catch (Exception wrongInput) {
            System.out.println("Something went wrong please try again");
            viewBalance();
        } finally {

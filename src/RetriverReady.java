@@ -14,7 +14,6 @@ public class RetriverReady {
         //System.out.println( student.toString());
         //student.showInfo();
 
-        //create n number of students
 
 
     }
