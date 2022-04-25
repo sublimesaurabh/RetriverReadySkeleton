@@ -60,7 +60,6 @@ public class StudentInformation {
                break;
            }
        } while (true);
-        //System.out.println("You are enrolled in the following: " + courseEnrolledName);
    }
 
    //shows balance
@@ -89,6 +88,7 @@ public class StudentInformation {
 
    //prints relevant inputs to console at the end of the program
     public static void showInfo() {
+        System.out.println("Today is " + java.time.LocalDate.now());
         System.out.println("Student Name: " + firstName + " " + lastName);
         System.out.println("Student ID: " + studentID);
         System.out.println("Student Email: " + studentEmail);
