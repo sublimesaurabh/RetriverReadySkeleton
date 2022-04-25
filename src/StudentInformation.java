@@ -1,8 +1,7 @@
 // Made: April 6, 2022.
 // By Saurabh Chapagain
 // s205@umbc.edu
-import org.jetbrains.annotations.Contract;
-import org.jetbrains.annotations.NotNull;
+
 import java.util.Scanner;
 
 public class StudentInformation {
@@ -16,7 +15,6 @@ public class StudentInformation {
     private static int gradeYear;
     private static double courseCost = 1104.00;
     private static double courseCostFullTime = 4439.00;
-
     private double fullTimeCost = 6309;
 
    /*TODO: 4/7/22
@@ -44,13 +42,11 @@ public class StudentInformation {
        this.gradeYear = userInput.nextInt();
 
        // Consuming the leftover new line
-       // using the nextLine() method
        userInput.nextLine();
 
        System.out.println("Please enter your student ID");
        this.studentID = userInput.nextLine();
    }
-
 
    public void enroll() {
         do{
@@ -67,9 +63,6 @@ public class StudentInformation {
         //System.out.println("You are enrolled in the following: " + courseEnrolledName);
    }
 
-//   public void viewCourses() {
-//       System.out.println("You are enrolled in the following: " + courseEnrolledName);
-//   }
    //shows balance
    public void viewBalance(){
        System.out.println("Your balance is: $" + totalBalance);
