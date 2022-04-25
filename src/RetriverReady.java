@@ -9,10 +9,11 @@ public class RetriverReady {
         StudentInformation student = new StudentInformation();
         student.Student();
         student.enroll();
+        //student.viewCourses();
         student.viewBalance();
         student.payBalance();
         //System.out.println( student.toString());
-        //student.showInfo();
+        student.showInfo();
 
 
 

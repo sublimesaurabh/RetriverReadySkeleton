@@ -1,20 +1,22 @@
 // Made: April 6, 2022.
 // By Saurabh Chapagain
 // s205@umbc.edu
-import java.sql.SQLOutput;
+import org.jetbrains.annotations.Contract;
+import org.jetbrains.annotations.NotNull;
 import java.util.Scanner;
 
 public class StudentInformation {
     protected static String [] courseNamesList = new String[7];
     private static String firstName;
     private static String lastName;
-    private static String courseName;
+    private static String courseEnrolledName;
     private static double totalBalance;
     private static String studentID;
-    private String studentEmail;
-    private String gradeYear;
-    private static double courseCost = 1104;
-    //TODO: add in updated prices
+    private static String studentEmail;
+    private static int gradeYear;
+    private static double courseCost = 1104.00;
+    private static double courseCostFullTime = 4439.00;
+
     private double fullTimeCost = 6309;
 
    /*TODO: 4/7/22
@@ -33,13 +35,17 @@ public class StudentInformation {
        System.out.println("Please enter your last name: ");
        this.lastName = userInput.nextLine();
 
-       System.out.println("Hello, " + this.firstName + this.lastName);
+       System.out.println("Hello, " + this.firstName + " " + this.lastName);
 
        System.out.println("Please enter your UMBC email: ");
        this.studentEmail = userInput.nextLine();
 
-       System.out.println("What grade year are you?");
-       this.gradeYear = userInput.nextLine();
+       System.out.println("What grade year are you? (Press 1 for Freshman, 2 for Sophomore, 3 for Junior, 4 for Senior");
+       this.gradeYear = userInput.nextInt();
+
+       // Consuming the leftover new line
+       // using the nextLine() method
+       userInput.nextLine();
 
        System.out.println("Please enter your student ID");
        this.studentID = userInput.nextLine();
@@ -47,27 +53,24 @@ public class StudentInformation {
 
 
    public void enroll() {
-
         do{
            Scanner in = new Scanner(System.in);
-           System.out.println("Please Enter Which class you want to register for: (q to quit)");
+           System.out.print("Please Enter Which class you want to register for: (q to quit)");
            String courseName = in.nextLine();
-           //courseNamesList[i] = in.nextInt();
-
            if (!courseName.equals("q")) {
-               courseName = courseName + "\n" + courseName;
+               courseEnrolledName = courseEnrolledName + "\n" + courseName;
                totalBalance = totalBalance + courseCost;
            } else {
                break;
            }
        } while (true);
-
-      /*TODO: BUG FIX
-         courseName is not printing to console
-       */
-       System.out.println("ENROLLED IN: " + courseName);
-       //System.out.println("TUITION BALANCE: " + totalBalance);
+        //System.out.println("You are enrolled in the following: " + courseEnrolledName);
    }
+
+//   public void viewCourses() {
+//       System.out.println("You are enrolled in the following: " + courseEnrolledName);
+//   }
+   //shows balance
    public void viewBalance(){
        System.out.println("Your balance is: $" + totalBalance);
    }
@@ -87,19 +90,18 @@ public class StudentInformation {
            System.out.println("Thank you for your payment of $" + payment);
            viewBalance();
        } catch (Exception wrongInput) {
-           System.out.println("Something went wrong please try again");
            viewBalance();
-       } finally {
-           //viewBalance();
        }
    }
-   // prints relevant info to console
-    //TODO: showInfo(); not printing to console
-    // Feel free to fix this bug
-    public static String showInfo(){
-       return "Name: " + firstName + lastName +
-               "\nCourses Enrolled: " + courseName +
-               "\nBalance is: $" + totalBalance;
+
+   //prints relevant inputs to console at the end of the program
+    public static void showInfo() {
+        System.out.println("Student Name: " + firstName + " " + lastName);
+        System.out.println("Student ID: " + studentID);
+        System.out.println("Student Email: " + studentEmail);
+        System.out.println("Grade Year: " + gradeYear);
+        System.out.println("Courses Enrolled: " + courseEnrolledName);
+        System.out.println("Total Balance: " + totalBalance);
     }
 }
 
