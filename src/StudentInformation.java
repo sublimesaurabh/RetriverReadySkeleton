@@ -49,89 +49,89 @@ public class StudentInformation {
         this.studentID = userInput.nextLine();
     }
 
-//    public void setCourseNamesList(String[] courseNamesList) {
-//        this.courseNamesList = courseNamesList;
-//    }
-//
-//    public void setFirstName(String firstName) {
-//        this.firstName = firstName;
-//    }
-//
-//    public void setLastName(String lastName) {
-//        this.lastName = lastName;
-//    }
-//
-//    public void setCourseEnrolledName(String courseEnrolledName) {
-//        this.courseEnrolledName = courseEnrolledName;
-//    }
-//
-//    public void setTotalBalance(double totalBalance) {
-//        this.totalBalance = totalBalance;
-//    }
-//
-//    public void setStudentID(String studentID) {
-//        this.studentID = studentID;
-//    }
-//
-//    public void setStudentEmail(String studentEmail) {
-//        this.studentEmail = studentEmail;
-//    }
-//
-//    public void setGradeYear(int gradeYear) {
-//        this.gradeYear = gradeYear;
-//    }
-//
-//    public void setCourseCost(double courseCost) {
-//        this.courseCost = courseCost;
-//    }
-//
-//    public void setCourseCostFullTime(double courseCostFullTime) {
-//        this.courseCostFullTime = courseCostFullTime;
-//    }
-//
-//    public void setFullTimeCost(double fullTimeCost) {
-//        this.fullTimeCost = fullTimeCost;
-//    }
-//
-//    public String[] getCourseNamesList() {
-//        return courseNamesList;
-//    }
-//
-//    public String getFirstName() {
-//        return firstName;
-//    }
-//
-//    public String getLastName() {
-//        return lastName;
-//    }
-//
-//    public String getCourseEnrolledName() {
-//        return courseEnrolledName;
-//    }
-//
-//    public double getTotalBalance() {
-//        return totalBalance;
-//    }
-//
-//    public String getStudentID() {
-//        return studentID;
-//    }
-//
-//    public String getStudentEmail() {
-//        return studentEmail;
-//    }
-//
-//    public int getGradeYear() {
-//        return gradeYear;
-//    }
-//
-//    public double getCourseCost() {
-//        return courseCost;
-//    }
-//
-//    public double getCourseCostFullTime() {
-//        return courseCostFullTime;
-//    }
+    public void setCourseNamesList(String[] courseNamesList) {
+        this.courseNamesList = courseNamesList;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setCourseEnrolledName(String courseEnrolledName) {
+        this.courseEnrolledName = courseEnrolledName;
+    }
+
+    public void setTotalBalance(double totalBalance) {
+        this.totalBalance = totalBalance;
+    }
+
+    public void setStudentID(String studentID) {
+        this.studentID = studentID;
+    }
+
+    public void setStudentEmail(String studentEmail) {
+        this.studentEmail = studentEmail;
+    }
+
+    public void setGradeYear(int gradeYear) {
+        this.gradeYear = gradeYear;
+    }
+
+    public void setCourseCost(double courseCost) {
+        this.courseCost = courseCost;
+    }
+
+    public void setCourseCostFullTime(double courseCostFullTime) {
+        this.courseCostFullTime = courseCostFullTime;
+    }
+
+    public void setFullTimeCost(double fullTimeCost) {
+        this.fullTimeCost = fullTimeCost;
+    }
+
+    public String[] getCourseNamesList() {
+        return courseNamesList;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getCourseEnrolledName() {
+        return courseEnrolledName;
+    }
+
+    public double getTotalBalance() {
+        return totalBalance;
+    }
+
+    public String getStudentID() {
+        return studentID;
+    }
+
+    public String getStudentEmail() {
+        return studentEmail;
+    }
+
+    public int getGradeYear() {
+        return gradeYear;
+    }
+
+    public double getCourseCost() {
+        return courseCost;
+    }
+
+    public double getCourseCostFullTime() {
+        return courseCostFullTime;
+    }
 
     public static void userYear() {
         switch (gradeYear) {
@@ -200,6 +200,14 @@ public class StudentInformation {
             System.out.println("Grade Year: " + gradeYear);
             System.out.println("Courses Enrolled: " + courseEnrolledName);
             System.out.println("Total Balance: " + totalBalance);
+        }
+        public String toString() {
+            return "Student Name: " + firstName + " " + lastName + "\n" +
+                    "Student ID: " + studentID + "\n" +
+                    "Student Email: " + studentEmail + "\n" +
+                    "Grade Year: " + gradeYear + "\n" +
+                    "Courses Enrolled: " + courseEnrolledName + "\n" +
+                    "Total Balance: " + totalBalance;
         }
     }
 

@@ -9,14 +9,12 @@ public class RetriverReady {
         StudentInformation student = new StudentInformation();
         student.Student();
         student.enroll();
-        //student.viewCourses();
         student.viewBalance();
         student.payBalance();
-        //System.out.println( student.toString());
         student.userYear();
         student.showInfo();
-
-
+        //JavaMail.sendEmail(student.getEmail(), student.getName(), student.getBalance());
+        JavaMail.send("sendersemail@gmail.com","password","recipients@gmail.com", "Retriever Ready: Here is your requested information", "Thank you for using Retriever Ready!");
 
     }
 }
