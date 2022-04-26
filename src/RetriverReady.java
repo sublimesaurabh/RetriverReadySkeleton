@@ -12,7 +12,8 @@ public class RetriverReady {
         student.payBalance();
         student.userYear();
         student.showInfo();
-        JavaMail.send();
+        JavaMail.wantEmail();
+        JavaMail.sendEmail();
     }
 }
 

@@ -200,7 +200,7 @@ public class StudentInformation {
             System.out.println("Grade Year: " + gradeYear);
             System.out.println("Courses Enrolled: " + courseEnrolledName);
             System.out.println("Total Balance: " + totalBalance);
-
+            //TODO: Printing twice to console at end, fix that, and make it more modular. April 26, 2022.
             //takes this info to JavaMail class, and send to user at the end of the program.
             return "Student Name: " + firstName + " " + lastName + "\n" +
                     "Student ID: " + studentID + "\n" +

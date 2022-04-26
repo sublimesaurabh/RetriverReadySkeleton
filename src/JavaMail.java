@@ -17,7 +17,21 @@ import javax.mail.internet.MimeMessage;
 public class JavaMail {
 
 
-    public static void send() {
+    public static void wantEmail(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Do you want to receive an email? (y/n)");
+        String answer = scanner.nextLine();
+        if(answer.equals("y")){
+            sendEmail();
+            System.out.println("Email sent successfully");
+        }
+        else{
+            System.out.println("You have chosen not to receive an email.");
+        }
+    }
+
+
+    public static void sendEmail() {
             //Get properties object
             Properties props = new Properties();
             props.put("mail.smtp.host", "smtp.gmail.com");
@@ -28,7 +42,7 @@ public class JavaMail {
             props.put("mail.smtp.port", "587");
 
             String to = StudentInformation.getStudentEmail();
-            String from = "retrieverready@gmail.com";
+            final String from = "retrieverready@gmail.com";
             password();
 
             //get Session
