@@ -13,6 +13,7 @@ public class RetriverReady {
         student.viewBalance();
         student.payBalance();
         //System.out.println( student.toString());
+        student.userYear();
         student.showInfo();
 
 
