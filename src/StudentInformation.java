@@ -117,7 +117,7 @@ public class StudentInformation {
         return studentID;
     }
 
-    public String getStudentEmail() {
+    public static String getStudentEmail() {
         return studentEmail;
     }
 
@@ -192,7 +192,7 @@ public class StudentInformation {
         }
 
         //prints relevant inputs to console at the end of the program
-        public static void showInfo () {
+        public static String showInfo () {
             //System.out.println("Today is " + java.time.LocalDate.now());
             System.out.println("Student Name: " + firstName + " " + lastName);
             System.out.println("Student ID: " + studentID);
@@ -200,8 +200,8 @@ public class StudentInformation {
             System.out.println("Grade Year: " + gradeYear);
             System.out.println("Courses Enrolled: " + courseEnrolledName);
             System.out.println("Total Balance: " + totalBalance);
-        }
-        public String toString() {
+
+            //takes this info to JavaMail class, and send to user at the end of the program.
             return "Student Name: " + firstName + " " + lastName + "\n" +
                     "Student ID: " + studentID + "\n" +
                     "Student Email: " + studentEmail + "\n" +
@@ -209,6 +209,7 @@ public class StudentInformation {
                     "Courses Enrolled: " + courseEnrolledName + "\n" +
                     "Total Balance: " + totalBalance;
         }
+
     }
 
 
