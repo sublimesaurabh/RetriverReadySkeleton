@@ -16,6 +16,8 @@ public class StudentInformation {
     private static double courseCost = 1104.00;
     private static double courseCostFullTime = 4439.00;
     private double fullTimeCost = 6309;
+    private int numberOfCourses = 1;
+    private int courseNumberLimit = 7;
 
    /*TODO: 4/7/22
     Course Cost needs to be expanded upon
@@ -37,6 +39,8 @@ public class StudentInformation {
 
         System.out.println("Please enter your UMBC email: ");
         this.studentEmail = userInput.nextLine();
+        JavaMail jm = new JavaMail();
+        jm.emailValidation();
 
         System.out.println("What grade year are you? (Press 1 for Freshman, 2 for Sophomore, 3 for Junior, 4 for Senior");
         this.gradeYear = userInput.nextInt();
@@ -154,17 +158,41 @@ public class StudentInformation {
     }
 
         public void enroll () {
-            do {
+//            do {
+//                Scanner in = new Scanner(System.in);
+//                System.out.print("Please Enter Which class you want to register for: (q to quit)");
+//                String courseName = in.nextLine();
+//                //limitCourses();
+//                if (!courseName.equals("q")) {
+//                    numberOfCourses++;
+//                    courseEnrolledName = courseEnrolledName + "\n" + courseName;
+//                    totalBalance = totalBalance + courseCost;
+//                } else {
+//                    break;
+//                }
+//            } while (numberOfCourses <= courseNumberLimit);
+            while (numberOfCourses <= courseNumberLimit) {
                 Scanner in = new Scanner(System.in);
                 System.out.print("Please Enter Which class you want to register for: (q to quit)");
                 String courseName = in.nextLine();
                 if (!courseName.equals("q")) {
+                    numberOfCourses++;
                     courseEnrolledName = courseEnrolledName + "\n" + courseName;
                     totalBalance = totalBalance + courseCost;
                 } else {
                     break;
                 }
-            } while (true);
+            }
+        }
+
+
+
+        public void limitCourses() {
+            if (numberOfCourses <= courseNumberLimit) {
+                System.out.println("You have reached the limit of courses you can enroll in.");
+                System.out.println("-------------------------------------------------------");
+                System.out.println("You can only enroll in 7 courses, Please type 'q' to quit");
+            }
         }
 
         //shows balance
@@ -191,6 +219,7 @@ public class StudentInformation {
             }
         }
 
+        //TODO: This is shit code, make more modular
         //prints relevant inputs to console at the end of the program
         public static String showInfo () {
             //System.out.println("Today is " + java.time.LocalDate.now());

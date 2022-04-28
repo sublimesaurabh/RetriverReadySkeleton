@@ -13,7 +13,6 @@ public class RetriverReady {
         student.userYear();
         student.showInfo();
         JavaMail.wantEmail();
-        JavaMail.sendEmail();
     }
 }
 
