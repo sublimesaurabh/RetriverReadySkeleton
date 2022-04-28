@@ -8,6 +8,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.regex.Pattern;
 import javax.mail.*;
 import javax.mail.internet.*;
 import javax.mail.Message;
@@ -17,16 +18,23 @@ import javax.mail.internet.MimeMessage;
 public class JavaMail {
 
     public void emailValidation(){
+
+        String regex = "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$";
+        Pattern pattern = Pattern.compile(regex);
+
         StudentInformation si = new StudentInformation();
-        if(!si.getStudentEmail().contains("@")){
+        if(!si.getStudentEmail().contains("@") || si.getStudentEmail() == null || si.getStudentEmail().isEmpty()){
             Scanner email = new Scanner(System.in);
             System.out.println("Invalid email address");
             System.out.println("Please enter a valid email address");
             StudentInformation sc = new StudentInformation();
             si.setStudentEmail(email.nextLine());
         }
-        else{
+        else if(pattern.matcher(si.getStudentEmail()).matches()){
             System.out.println("Valid Email entered!");
+        }
+        else{
+            System.out.println("Invalid Email entered!");
         }
     }
 
