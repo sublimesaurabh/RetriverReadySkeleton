@@ -137,7 +137,7 @@ public class StudentInformation {
         return courseCostFullTime;
     }
 
-    public static void userYear() {
+    public static void userYear(int gradeYear) {
         switch (gradeYear) {
             case 1:
                 System.out.println("You are a Freshman");

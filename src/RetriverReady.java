@@ -10,7 +10,7 @@ public class RetriverReady {
         student.enroll();
         student.viewBalance();
         student.payBalance();
-        student.userYear();
+        student.userYear(student.getGradeYear());
         student.showInfo();
         JavaMail.wantEmail();
     }
