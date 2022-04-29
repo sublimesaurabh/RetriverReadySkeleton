@@ -18,16 +18,16 @@ import javax.mail.internet.MimeMessage;
 public class JavaMail {
 
     public void emailValidation(){
-
+        //regular expression to check if email is valid
         String regex = "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$";
         Pattern pattern = Pattern.compile(regex);
 
         StudentInformation si = new StudentInformation();
+        Scanner email = new Scanner(System.in);
+
         if(!si.getStudentEmail().contains("@") || si.getStudentEmail() == null || si.getStudentEmail().isEmpty()){
-            Scanner email = new Scanner(System.in);
             System.out.println("Invalid email address");
             System.out.println("Please enter a valid email address");
-            StudentInformation sc = new StudentInformation();
             si.setStudentEmail(email.nextLine());
         }
         else if(pattern.matcher(si.getStudentEmail()).matches()){
@@ -35,6 +35,8 @@ public class JavaMail {
         }
         else{
             System.out.println("Invalid Email entered!");
+            System.out.println("Please enter a valid email address");
+            si.setStudentEmail(email.nextLine());
         }
     }
 
@@ -47,8 +49,11 @@ public class JavaMail {
             sendEmail();
             System.out.println("Email sent successfully");
         }
-        else{
+        else if (answer.equals("n")){
             System.out.println("You have chosen not to receive an email.");
+        } else {
+            System.out.println("Invalid input, try again please.");
+            wantEmail();
         }
     }
 
