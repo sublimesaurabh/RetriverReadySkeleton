@@ -171,6 +171,9 @@ public class StudentInformation {
 //                    break;
 //                }
 //            } while (numberOfCourses <= courseNumberLimit);
+        /*    TODO: Limit students to enroll in 7 courses, if they try to enroll in more than 7 courses, they will be prompted to get advisor approval
+               Also, let user remove course from their list of courses
+         */
             while (numberOfCourses <= courseNumberLimit) {
                 Scanner in = new Scanner(System.in);
                 System.out.print("Please Enter Which class you want to register for: (q to quit)");
@@ -219,18 +222,18 @@ public class StudentInformation {
             }
         }
 
-        //TODO: This is shit code, make more modular
         //prints relevant inputs to console at the end of the program
-        public static String showInfo () {
-            //System.out.println("Today is " + java.time.LocalDate.now());
+        public static void showInfo () {
+            System.out.println("Today is " + java.time.LocalDate.now());
             System.out.println("Student Name: " + firstName + " " + lastName);
             System.out.println("Student ID: " + studentID);
             System.out.println("Student Email: " + studentEmail);
             System.out.println("Grade Year: " + gradeYear);
             System.out.println("Courses Enrolled: " + courseEnrolledName);
             System.out.println("Total Balance: " + totalBalance);
-            //TODO: Printing twice to console at end, fix that, and make it more modular. April 26, 2022.
-            //takes this info to JavaMail class, and send to user at the end of the program.
+        }
+
+        public String getInfo (){
             return "Student Name: " + firstName + " " + lastName + "\n" +
                     "Student ID: " + studentID + "\n" +
                     "Student Email: " + studentEmail + "\n" +

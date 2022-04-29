@@ -45,11 +45,11 @@ public class JavaMail {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Do you want to receive an email? (y/n)");
         String answer = scanner.nextLine();
-        if(answer.equals("y")){
+        if(answer.equals("y") || answer.equals("Y")){
             sendEmail();
             System.out.println("Email sent successfully");
         }
-        else if (answer.equals("n")){
+        else if (answer.equals("n") || answer.equals("N")){
             System.out.println("You have chosen not to receive an email.");
         } else {
             System.out.println("Invalid input, try again please.");
@@ -84,10 +84,11 @@ public class JavaMail {
                 MimeMessage message = new MimeMessage(session);
                 message.addRecipient(Message.RecipientType.TO,new InternetAddress(to));
                 message.setSubject("Your Enrollment Information");
-                message.setText(StudentInformation.showInfo());
+                StudentInformation si = new StudentInformation();
+                message.setText(si.getInfo());
                 //sending message
                 Transport.send(message);
-                System.out.println("message sent successfully");
+               // System.out.println("message sent successfully");
             } catch (MessagingException e) {
                 throw new RuntimeException(e);}
         }
