@@ -7,9 +7,11 @@ public class RetrieverReady {
     public static void main(String[] args) {
         StudentInformation student = new StudentInformation();
         student.Student();
-        student.enroll();
-        student.viewBalance();
-        student.payBalance();
+        StudentEnroller se = new StudentEnroller();
+        se.enroll();
+        PayBills pb = new PayBills();
+        pb.viewBalance();
+        pb.payBalance();
         student.userYear(student.getGradeYear());
         student.showInfo();
         JavaMail.wantEmail();

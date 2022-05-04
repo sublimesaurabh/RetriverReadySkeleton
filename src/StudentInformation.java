@@ -5,19 +5,16 @@
 import java.util.Scanner;
 
 public class StudentInformation {
-    protected static String[] courseNamesList = new String[7];
+    protected static String[] courseNamesList = new String[9];
     private static String firstName;
     private static String lastName;
     private static String courseEnrolledName;
-    private static double totalBalance;
     private static String studentID;
     private static String studentEmail;
     private static int gradeYear;
-    private static double courseCost = 1104.00;
-    private static double courseCostFullTime = 4439.00;
+    static double courseCost = 1104.00;
+    static double courseCostFullTime = 4439.00;
     private double fullTimeCost = 6309;
-    private int numberOfCourses = 1;
-    private int courseNumberLimit = 7;
 
    /*TODO: 4/7/22
     Course Cost needs to be expanded upon
@@ -53,9 +50,6 @@ public class StudentInformation {
         this.studentID = userInput.nextLine();
     }
 
-    public void setCourseNamesList(String[] courseNamesList) {
-        this.courseNamesList = courseNamesList;
-    }
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
@@ -63,14 +57,6 @@ public class StudentInformation {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
-    }
-
-    public void setCourseEnrolledName(String courseEnrolledName) {
-        this.courseEnrolledName = courseEnrolledName;
-    }
-
-    public void setTotalBalance(double totalBalance) {
-        this.totalBalance = totalBalance;
     }
 
     public void setStudentID(String studentID) {
@@ -109,14 +95,6 @@ public class StudentInformation {
         return lastName;
     }
 
-    public String getCourseEnrolledName() {
-        return courseEnrolledName;
-    }
-
-    public double getTotalBalance() {
-        return totalBalance;
-    }
-
     public String getStudentID() {
         return studentID;
     }
@@ -129,13 +107,6 @@ public class StudentInformation {
         return gradeYear;
     }
 
-    public double getCourseCost() {
-        return courseCost;
-    }
-
-    public double getCourseCostFullTime() {
-        return courseCostFullTime;
-    }
 
     public static void userYear(int gradeYear) {
         switch (gradeYear) {
@@ -157,70 +128,71 @@ public class StudentInformation {
         }
     }
 
-        public void enroll () {
-//            do {
+//        public void enroll () {
+////            do {
+////                Scanner in = new Scanner(System.in);
+////                System.out.print("Please Enter Which class you want to register for: (q to quit)");
+////                String courseName = in.nextLine();
+////                //limitCourses();
+////                if (!courseName.equals("q")) {
+////                    numberOfCourses++;
+////                    courseEnrolledName = courseEnrolledName + "\n" + courseName;
+////                    totalBalance = totalBalance + courseCost;
+////                } else {
+////                    break;
+////                }
+////            } while (numberOfCourses <= courseNumberLimit);
+//        /*    TODO: Limit students to enroll in 7 courses, if they try to enroll in more than 7 courses, they will be prompted to get advisor approval
+//               Also, let user remove course from their list of courses
+//         */
+//            while (numberOfCourses <= courseNumberLimit) {
 //                Scanner in = new Scanner(System.in);
 //                System.out.print("Please Enter Which class you want to register for: (q to quit)");
 //                String courseName = in.nextLine();
-//                //limitCourses();
 //                if (!courseName.equals("q")) {
 //                    numberOfCourses++;
 //                    courseEnrolledName = courseEnrolledName + "\n" + courseName;
 //                    totalBalance = totalBalance + courseCost;
+//                    courseNamesList[numberOfCourses] = courseName;
 //                } else {
 //                    break;
 //                }
-//            } while (numberOfCourses <= courseNumberLimit);
-        /*    TODO: Limit students to enroll in 7 courses, if they try to enroll in more than 7 courses, they will be prompted to get advisor approval
-               Also, let user remove course from their list of courses
-         */
-            while (numberOfCourses <= courseNumberLimit) {
-                Scanner in = new Scanner(System.in);
-                System.out.print("Please Enter Which class you want to register for: (q to quit)");
-                String courseName = in.nextLine();
-                if (!courseName.equals("q")) {
-                    numberOfCourses++;
-                    courseEnrolledName = courseEnrolledName + "\n" + courseName;
-                    totalBalance = totalBalance + courseCost;
-                } else {
-                    break;
-                }
-            }
-        }
+//            }
+//        }
 
 
 
-        public void limitCourses() {
-            if (numberOfCourses <= courseNumberLimit) {
-                System.out.println("You have reached the limit of courses you can enroll in.");
-                System.out.println("-------------------------------------------------------");
-                System.out.println("You can only enroll in 7 courses, Please type 'q' to quit");
-            }
-        }
+//        public void limitCourses() {
+//            if (numberOfCourses <= courseNumberLimit) {
+//                System.out.println("You have reached the limit of courses you can enroll in.");
+//                System.out.println("-------------------------------------------------------");
+//                System.out.println("You can only enroll in 7 courses, Please type 'q' to quit");
+//            }
+//        }
 
-        //shows balance
-        public void viewBalance () {
-            System.out.println("Your balance is: $" + totalBalance);
-        }
-
-        //pays student balance
-        public void payBalance () {
-
-            Scanner input = new Scanner(System.in);
-            System.out.println("Enter your payment: $");
-            double payment = input.nextDouble();
-
-            if (payment > totalBalance) {
-                System.out.println("The amount you have entered exceeds your balance. Please try again");
-                System.out.println("Enter your payment: $");
-                payment = input.nextDouble();
-                totalBalance = totalBalance - payment;
-                System.out.println("Thank you for your payment of $" + payment);
-            } else if (payment <= totalBalance) {
-                totalBalance = totalBalance - payment;
-                System.out.println("Thank you for your payment of $" + payment);
-            }
-        }
+//        //shows balance
+//        public void viewBalance () {
+//            System.out.println("Your balance is: $" + totalBalance);
+//        }
+//
+//        //pays student balance
+//        public void payBalance () {
+//
+//            Scanner input = new Scanner(System.in);
+//            System.out.println("Enter your payment: $");
+//            double payment = input.nextDouble();
+//
+//            if (payment > totalBalance) {
+//                System.out.println("The amount you have entered exceeds your balance. Please try again");
+//                System.out.println("Enter your payment: $");
+//                payment = input.nextDouble();
+//                totalBalance = totalBalance - payment;
+//                System.out.println("Thank you for your payment of $" + payment);
+//            } else if (payment <= totalBalance) {
+//                totalBalance = totalBalance - payment;
+//                System.out.println("Thank you for your payment of $" + payment);
+//            }
+//        }
 
         //prints relevant inputs to console at the end of the program
         public static void showInfo () {
@@ -230,7 +202,7 @@ public class StudentInformation {
             System.out.println("Student Email: " + studentEmail);
             System.out.println("Grade Year: " + gradeYear);
             System.out.println("Courses Enrolled: " + courseEnrolledName);
-            System.out.println("Total Balance: " + totalBalance);
+            System.out.println("Total Balance: " + PayBills.totalBalance);
         }
 
         public String getInfo (){
@@ -239,8 +211,9 @@ public class StudentInformation {
                     "Student Email: " + studentEmail + "\n" +
                     "Grade Year: " + gradeYear + "\n" +
                     "Courses Enrolled: " + courseEnrolledName + "\n" +
-                    "Total Balance: " + totalBalance;
+                    "Total Balance: " + PayBills.totalBalance;
         }
+
 
     }
 
