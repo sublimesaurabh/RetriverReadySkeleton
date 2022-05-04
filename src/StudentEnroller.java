@@ -5,7 +5,17 @@
 
 import java.util.Scanner;
 
-//child class
+/**
+ * This is StudentEnroller class that enrolls students into courses.
+ *
+ * It is the child class of StudentInformation
+ *
+ * @author Saurabh Chapagain
+ * @version 1.0
+ * @see StudentInformation PaysBills
+ *
+ *
+ */
 public class StudentEnroller extends StudentInformation {
 
     int numberOfCourses = 1;

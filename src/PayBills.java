@@ -4,7 +4,18 @@
 
 import java.util.Scanner;
 
-//child class
+/**
+ * This is java mail class that sends an email to the user
+ *
+ * We use Regex for email validation, and smtp for sending the email.
+ *
+ * @author Saurabh Chapagain
+ * @version 1.0
+ * @see RetrieverReady
+ *
+ *
+ */
+
 public class PayBills extends StudentInformation{
     protected static double totalBalance;
 

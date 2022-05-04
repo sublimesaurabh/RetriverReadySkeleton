@@ -10,6 +10,17 @@ import javax.mail.*;
 import javax.mail.internet.*;
 import javax.mail.Message;
 import javax.mail.internet.MimeMessage;
+/**
+ * This is java mail class that sends an email to the user
+ *
+ * We use Regex for email validation, and smtp for sending the email.
+ *
+ * @author Saurabh Chapagain
+ * @version 1.0
+ * @see <a href="https://www.javatpoint.com/java-mail">JavaMail</a> , RetrieverReady
+ *
+ *
+ */
 
 public class JavaMail {
 

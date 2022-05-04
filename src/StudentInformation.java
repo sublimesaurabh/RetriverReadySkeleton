@@ -4,6 +4,18 @@
 
 import java.util.Scanner;
 
+/**
+ * This is StudentEnroller class that enrolls students into courses.
+ *
+ * It is the child class of StudentInformation
+ *
+ * @author Saurabh Chapagain
+ * @version 1.0
+ * @see PayBills StudentEnroller JavaMails
+ *
+ *
+ */
+
 public class StudentInformation {
     protected static String[] courseNamesList = new String[6];
     private static String firstName;
