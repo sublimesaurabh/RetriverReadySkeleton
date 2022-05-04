@@ -43,15 +43,14 @@ public class StudentEnroller extends StudentInformation {
         }
     }
 
-
-        public void limitCourses () {
-            if (numberOfCourses <= courseNumberLimit) {
-                System.out.println("You have reached the limit of courses you can enroll in.");
-                System.out.println("-------------------------------------------------------");
-                System.out.println("You can only enroll in 7 courses, Please type 'q' to quit");
-            }
+    //TODO: Implement this method
+    public void removeCourse() {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Please Enter Which class you want to remove: ");
+        String courseName = in.nextLine();
+        if (courseName.equals(courseNamesList[numberOfCourses])) {
+            PayBills.totalBalance = PayBills.totalBalance - courseCost;
+            numberOfCourses--;
         }
-
-
     }
-
+}

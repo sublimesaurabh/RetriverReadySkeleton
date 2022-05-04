@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 //child class
 public class PayBills extends StudentInformation{
-    static double totalBalance;
+    protected static double totalBalance;
 
     public void setTotalBalance(double totalBalance) {
         this.totalBalance = totalBalance;

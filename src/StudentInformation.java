@@ -5,7 +5,7 @@
 import java.util.Scanner;
 
 public class StudentInformation {
-    protected static String[] courseNamesList = new String[9];
+    protected static String[] courseNamesList = new String[6];
     private static String firstName;
     private static String lastName;
     private static String courseEnrolledName;
@@ -128,73 +128,7 @@ public class StudentInformation {
         }
     }
 
-//        public void enroll () {
-////            do {
-////                Scanner in = new Scanner(System.in);
-////                System.out.print("Please Enter Which class you want to register for: (q to quit)");
-////                String courseName = in.nextLine();
-////                //limitCourses();
-////                if (!courseName.equals("q")) {
-////                    numberOfCourses++;
-////                    courseEnrolledName = courseEnrolledName + "\n" + courseName;
-////                    totalBalance = totalBalance + courseCost;
-////                } else {
-////                    break;
-////                }
-////            } while (numberOfCourses <= courseNumberLimit);
-//        /*    TODO: Limit students to enroll in 7 courses, if they try to enroll in more than 7 courses, they will be prompted to get advisor approval
-//               Also, let user remove course from their list of courses
-//         */
-//            while (numberOfCourses <= courseNumberLimit) {
-//                Scanner in = new Scanner(System.in);
-//                System.out.print("Please Enter Which class you want to register for: (q to quit)");
-//                String courseName = in.nextLine();
-//                if (!courseName.equals("q")) {
-//                    numberOfCourses++;
-//                    courseEnrolledName = courseEnrolledName + "\n" + courseName;
-//                    totalBalance = totalBalance + courseCost;
-//                    courseNamesList[numberOfCourses] = courseName;
-//                } else {
-//                    break;
-//                }
-//            }
-//        }
-
-
-
-//        public void limitCourses() {
-//            if (numberOfCourses <= courseNumberLimit) {
-//                System.out.println("You have reached the limit of courses you can enroll in.");
-//                System.out.println("-------------------------------------------------------");
-//                System.out.println("You can only enroll in 7 courses, Please type 'q' to quit");
-//            }
-//        }
-
-//        //shows balance
-//        public void viewBalance () {
-//            System.out.println("Your balance is: $" + totalBalance);
-//        }
-//
-//        //pays student balance
-//        public void payBalance () {
-//
-//            Scanner input = new Scanner(System.in);
-//            System.out.println("Enter your payment: $");
-//            double payment = input.nextDouble();
-//
-//            if (payment > totalBalance) {
-//                System.out.println("The amount you have entered exceeds your balance. Please try again");
-//                System.out.println("Enter your payment: $");
-//                payment = input.nextDouble();
-//                totalBalance = totalBalance - payment;
-//                System.out.println("Thank you for your payment of $" + payment);
-//            } else if (payment <= totalBalance) {
-//                totalBalance = totalBalance - payment;
-//                System.out.println("Thank you for your payment of $" + payment);
-//            }
-//        }
-
-        //prints relevant inputs to console at the end of the program
+    //prints relevant inputs to console at the end of the program
         public static void showInfo () {
             System.out.println("Today is " + java.time.LocalDate.now());
             System.out.println("Student Name: " + firstName + " " + lastName);
@@ -205,6 +139,7 @@ public class StudentInformation {
             System.out.println("Total Balance: " + PayBills.totalBalance);
         }
 
+        //returns info
         public String getInfo (){
             return "Student Name: " + firstName + " " + lastName + "\n" +
                     "Student ID: " + studentID + "\n" +

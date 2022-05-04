@@ -9,6 +9,7 @@ public class RetrieverReady {
         student.Student();
         StudentEnroller se = new StudentEnroller();
         se.enroll();
+        student.getCourseNamesList();
         PayBills pb = new PayBills();
         pb.viewBalance();
         pb.payBalance();

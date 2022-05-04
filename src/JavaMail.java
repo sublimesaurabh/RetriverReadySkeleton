@@ -3,16 +3,12 @@
 //Description: This is a java program that sends an email to the user.
 //DO NOT MODIFY THIS FILE
 
-import org.jetbrains.annotations.Contract;
-import org.jetbrains.annotations.NotNull;
+
 import java.util.*;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import java.util.regex.Pattern;
 import javax.mail.*;
 import javax.mail.internet.*;
 import javax.mail.Message;
-import javax.activation.*;
 import javax.mail.internet.MimeMessage;
 
 public class JavaMail {
@@ -27,7 +23,7 @@ public class JavaMail {
 
         if(!si.getStudentEmail().contains("@") || si.getStudentEmail() == null || si.getStudentEmail().isEmpty()){
             System.out.println("Invalid email address");
-            System.out.println("Please enter a valid email address");
+            System.out.println("Please enter a valid email address: ");
             si.setStudentEmail(email.nextLine());
         }
         else if(pattern.matcher(si.getStudentEmail()).matches()){
@@ -94,8 +90,8 @@ public class JavaMail {
         }
 
         //password for email, protected so that it cannot be used by other classes
-        @Contract(pure = true)
-        protected static @NotNull String password(){
+
+        protected static String password(){
         return "#'retriever.xready#";
         }
 
