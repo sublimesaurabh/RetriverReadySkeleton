@@ -4,12 +4,14 @@
 //DO NOT MODIFY THIS FILE
 
 
-import java.util.*;
-import java.util.regex.Pattern;
 import javax.mail.*;
-import javax.mail.internet.*;
-import javax.mail.Message;
+import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
+import javax.mail.PasswordAuthentication;
+import java.util.Properties;
+import java.util.Scanner;
+import java.util.regex.Pattern;
+
 /**
  * This is java mail class that sends an email to the user
  *
@@ -101,7 +103,6 @@ public class JavaMail {
         }
 
         //password for email, protected so that it cannot be used by other classes
-
         protected static String password(){
         return "#'retriever.xready#";
         }
