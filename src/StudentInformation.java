@@ -20,13 +20,13 @@ public class StudentInformation {
     protected static String[] courseNamesList = new String[6];
     private static String firstName;
     private static String lastName;
-    private static String courseEnrolledName;
+    static String courseEnrolledName;
     private static String studentID;
     private static String studentEmail;
     private static int gradeYear;
     static double courseCost = 1104.00;
     static double courseCostFullTime = 4439.00;
-    private double fullTimeCost = 6309;
+    final private int FULL_TIME_COST = 6309;
 
    /*TODO: 4/7/22
     Course Cost needs to be expanded upon
@@ -35,6 +35,40 @@ public class StudentInformation {
      they need permission from advisor
      - In State students are charged differently, than out-of-state students
     */
+
+    /**
+     * This is the constructor of the class StudentInformation
+     *
+     * @param firstName
+     * @param lastName
+     * @param studentID
+     * @param studentEmail
+     * @param gradeYear
+     * @param courseEnrolledName
+     */
+    public StudentInformation(String firstName, String lastName, String studentID, String studentEmail, int gradeYear, String courseEnrolledName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.studentID = studentID;
+        this.studentEmail = studentEmail;
+        this.gradeYear = gradeYear;
+        this.courseEnrolledName = courseEnrolledName;
+    }
+    /**
+     * This is the default constructor of the class StudentInformation
+     *
+     */
+    public StudentInformation(){
+       // default constructor
+    }
+
+    public StudentInformation(String firstName, String lastName, String studentID, String studentEmail, int gradeYear) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.studentID = studentID;
+        this.studentEmail = studentEmail;
+        this.gradeYear = gradeYear;
+    }
 
     public void Student() {
         Scanner userInput = new Scanner(System.in);
@@ -49,7 +83,7 @@ public class StudentInformation {
         System.out.println("Please enter your UMBC email: ");
         this.studentEmail = userInput.nextLine();
         JavaMail jm = new JavaMail();
-        jm.emailValidation();
+        jm.emailValidation(this.studentEmail);
 
         System.out.println("What grade year are you? (Press 1 for Freshman, 2 for Sophomore, 3 for Junior, 4 for Senior");
         this.gradeYear = userInput.nextInt();
@@ -89,10 +123,6 @@ public class StudentInformation {
 
     public void setCourseCostFullTime(double courseCostFullTime) {
         this.courseCostFullTime = courseCostFullTime;
-    }
-
-    public void setFullTimeCost(double fullTimeCost) {
-        this.fullTimeCost = fullTimeCost;
     }
 
     public String[] getCourseNamesList() {

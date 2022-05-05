@@ -52,13 +52,12 @@ public class StudentEnroller extends StudentInformation {
             }
         }
     }
-
-    //TODO: Implement this method
+     //TODO: Implement this method
     public void removeCourse() {
         Scanner in = new Scanner(System.in);
         System.out.print("Please Enter Which class you want to remove: ");
         String courseName = in.nextLine();
-        if (courseName.equals(courseNamesList[numberOfCourses])) {
+        if (courseName.equals(courseEnrolledName)) {
             PayBills.totalBalance = PayBills.totalBalance - courseCost;
             numberOfCourses--;
         }

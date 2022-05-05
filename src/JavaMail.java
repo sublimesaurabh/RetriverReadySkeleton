@@ -26,18 +26,18 @@ import java.util.regex.Pattern;
 
 public class JavaMail {
 
-    public void emailValidation(){
+    public void emailValidation(String email){
         //regular expression to check if email is valid
         String regex = "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$";
         Pattern pattern = Pattern.compile(regex);
 
         StudentInformation si = new StudentInformation();
-        Scanner email = new Scanner(System.in);
+        Scanner newemail = new Scanner(System.in);
 
         if(!si.getStudentEmail().contains("@") || si.getStudentEmail() == null || si.getStudentEmail().isEmpty()){
             System.out.println("Invalid email address");
             System.out.println("Please enter a valid email address: ");
-            si.setStudentEmail(email.nextLine());
+            si.setStudentEmail(newemail.nextLine());
         }
         else if(pattern.matcher(si.getStudentEmail()).matches()){
             System.out.println("Valid Email entered!");
@@ -45,7 +45,7 @@ public class JavaMail {
         else{
             System.out.println("Invalid Email entered!");
             System.out.println("Please enter a valid email address");
-            si.setStudentEmail(email.nextLine());
+            si.setStudentEmail(newemail.nextLine());
         }
     }
 

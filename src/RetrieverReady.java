@@ -22,6 +22,7 @@ public class RetrieverReady {
         student.Student();
         StudentEnroller se = new StudentEnroller();
         se.enroll();
+        se.removeCourse();
         student.getCourseNamesList();
         PayBills pb = new PayBills();
         pb.viewBalance();
