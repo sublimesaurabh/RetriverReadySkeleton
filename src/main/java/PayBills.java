@@ -18,6 +18,7 @@ import java.util.Scanner;
 
 public class PayBills extends StudentInformation{
     protected static double totalBalance;
+    protected static double totalPayment;
 
     public void setTotalBalance(double totalBalance) {
         this.totalBalance = totalBalance;
@@ -42,11 +43,14 @@ public class PayBills extends StudentInformation{
 
     //pays student balance
     public void payBalance () {
-
         Scanner input = new Scanner(System.in);
         System.out.println("Enter your payment: $");
-        double payment = input.nextDouble();
-
+        totalPayment = input.nextDouble();
+    }
+    public void payBalance (double payment) {
+        Scanner input = new Scanner(System.in);
+//        System.out.println("Enter your payment: $");
+//        payment = input.nextDouble();
         if (payment > totalBalance) {
             System.out.println("The amount you have entered exceeds your balance. Please try again");
             System.out.println("Enter your payment: $");

@@ -26,6 +26,7 @@ public class RetrieverReady {
         PayBills pb = new PayBills();
         pb.viewBalance();
         pb.payBalance();
+        pb.payBalance(pb.totalPayment);
         student.userYear(student.getGradeYear());
         student.showInfo();
         JavaMail.wantEmail();
