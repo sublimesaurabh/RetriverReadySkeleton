@@ -60,13 +60,14 @@ public class Finance extends StudentInformation{
      */
     public void payBalance (double payment) {
         Scanner input = new Scanner(System.in);
-        if (payment > totalBalance) {
+
+        if (Math.max(payment, totalBalance) == payment) {
             System.out.println("The amount you have entered exceeds your balance. Please try again");
             System.out.println("Enter your payment: $");
             payment = input.nextDouble();
             totalBalance = totalBalance - payment;
             System.out.println("Thank you for your payment of $" + payment);
-        } else if (payment <= totalBalance) {
+        } else if (Math.max(payment, totalBalance) == totalBalance) {
             totalBalance = totalBalance - payment;
             System.out.println("Thank you for your payment of $" + payment);
         }
