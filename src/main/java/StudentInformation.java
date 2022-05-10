@@ -85,9 +85,12 @@ public class StudentInformation {
         Scanner userInput = new Scanner(System.in);
         System.out.println("Please enter your first name: ");
         this.firstName = userInput.nextLine();
+        this.firstName = firstName.substring(0, 1).toUpperCase()+ firstName.substring(1);;
 
         System.out.println("Please enter your last name: ");
         this.lastName = userInput.nextLine();
+        this.lastName = lastName.substring(0, 1).toUpperCase() + lastName.substring(1);;
+
 
         System.out.println("Hello, " + this.firstName + " " + this.lastName);
 
