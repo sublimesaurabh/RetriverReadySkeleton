@@ -5,9 +5,9 @@
 import java.util.Scanner;
 
 /**
- * This is StudentEnroller class that enrolls students into courses.
+ * This is StudentInformation class that collects student information
  *
- * It is the child class of StudentInformation
+ * It is the parent class of StudentEnroller anmd PaysBills classes
  *
  * @author Saurabh Chapagain
  * @version 1.0
@@ -47,6 +47,7 @@ public class StudentInformation {
      * @param courseEnrolledName
      */
     public StudentInformation(String firstName, String lastName, String studentID, String studentEmail, int gradeYear, String courseEnrolledName) {
+        super();
         this.firstName = firstName;
         this.lastName = lastName;
         this.studentID = studentID;
@@ -62,6 +63,14 @@ public class StudentInformation {
        // default constructor
     }
 
+    /**
+     * This is a parameterized constructor of theStudentInformation class
+     * @param firstName
+     * @param lastName
+     * @param studentID
+     * @param studentEmail
+     * @param gradeYear
+     */
     public StudentInformation(String firstName, String lastName, String studentID, String studentEmail, int gradeYear) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -70,6 +79,9 @@ public class StudentInformation {
         this.gradeYear = gradeYear;
     }
 
+    /**
+     * This method is used to collect information about the student
+     */
     public void Student() {
         Scanner userInput = new Scanner(System.in);
         System.out.println("Please enter your first name: ");
@@ -88,68 +100,95 @@ public class StudentInformation {
         System.out.println("What grade year are you? (Press 1 for Freshman, 2 for Sophomore, 3 for Junior, 4 for Senior");
         this.gradeYear = userInput.nextInt();
 
-
 //      Consuming the leftover new line
         userInput.nextLine();
 
         System.out.println("Please enter your student ID");
         this.studentID = userInput.nextLine();
     }
-
-
+    /**
+     * This method returns information about the student
+     */
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
-
+    /**
+     * This method returns information about the student
+     */
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
-
+    /**
+     * This method returns information about the student
+     */
     public void setStudentID(String studentID) {
         this.studentID = studentID;
     }
-
+    /**
+     * This method returns information about the student
+     */
     public void setStudentEmail(String studentEmail) {
         this.studentEmail = studentEmail;
     }
-
+    /**
+     * This method returns information about the student
+     */
     public void setGradeYear(int gradeYear) {
         this.gradeYear = gradeYear;
     }
-
+    /**
+     * This method returns information about the student
+     */
     public void setCourseCost(double courseCost) {
         this.courseCost = courseCost;
     }
-
+    /**
+     * This method returns information about the student
+     */
     public void setCourseCostFullTime(double courseCostFullTime) {
         this.courseCostFullTime = courseCostFullTime;
     }
-
+    /**
+     * This method returns information about the student
+     */
     public String[] getCourseNamesList() {
         return courseNamesList;
     }
-
+    /**
+     * This method returns information about the student
+     */
     public String getFirstName() {
         return firstName;
     }
-
+    /**
+     * This method returns information about the student
+     */
     public String getLastName() {
         return lastName;
     }
-
+    /**
+     * This method returns information about the student
+     */
     public String getStudentID() {
         return studentID;
     }
-
+    /**
+     * This method returns information about the student
+     */
     public static String getStudentEmail() {
         return studentEmail;
     }
-
+    /**
+     * This method returns information about the student
+     */
     public int getGradeYear() {
         return gradeYear;
     }
 
-
+    /**
+     * This method is used to classify the student into a specific grade level
+     * @param gradeYear
+     */
     public static void userYear(int gradeYear) {
         switch (gradeYear) {
             case 1:
@@ -170,7 +209,11 @@ public class StudentInformation {
         }
     }
 
-    //prints relevant inputs to console at the end of the program
+    /**
+     * This method shows the student's information
+     *
+     *
+     */
         public static void showInfo () {
             System.out.println("Today is " + java.time.LocalDate.now());
             System.out.println("Student Name: " + firstName + " " + lastName);
@@ -181,7 +224,9 @@ public class StudentInformation {
             System.out.println("Total Balance: " + PayBills.totalBalance);
         }
 
-        //returns info
+    /**
+     * This method returns information about the student
+     */
         public String getInfo (){
             return "Student Name: " + firstName + " " + lastName + "\n" +
                     "Student ID: " + studentID + "\n" +
@@ -190,8 +235,6 @@ public class StudentInformation {
                     "Courses Enrolled: " + courseEnrolledName + "\n" +
                     "Total Balance: " + PayBills.totalBalance;
         }
-
-
     }
 
 

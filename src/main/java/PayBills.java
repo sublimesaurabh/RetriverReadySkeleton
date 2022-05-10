@@ -5,9 +5,9 @@
 import java.util.Scanner;
 
 /**
- * This is java mail class that sends an email to the user
+ * This is the PaysBills class that allows Student to pay their bills.
  *
- * We use Regex for email validation, and smtp for sending the email.
+ * It is the child class of the StudentInformation class.
  *
  * @author Saurabh Chapagain
  * @version 1.0
@@ -17,6 +17,7 @@ import java.util.Scanner;
  */
 
 public class PayBills extends StudentInformation{
+
     protected static double totalBalance;
     protected static double totalPayment;
 
@@ -36,21 +37,29 @@ public class PayBills extends StudentInformation{
         return courseCostFullTime;
     }
 
-    //shows balance
+    /**
+     * This is the viewBalance method which allows the user to view their balance.
+     */
     public void viewBalance () {
         System.out.println("Your balance is: $" + totalBalance);
     }
 
-    //pays student balance
+    /**
+     * This is the payBalance method which allows the user to pay their bills.
+     */
     public void payBalance () {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter your payment: $");
         totalPayment = input.nextDouble();
     }
+    /**
+     * This is the payBalance method with parameters which allows the user to pay their bills.
+     * If the amount is greater than the balance, it will print an error message and ask the user to pay again.
+     *
+     * @param payment
+     */
     public void payBalance (double payment) {
         Scanner input = new Scanner(System.in);
-//        System.out.println("Enter your payment: $");
-//        payment = input.nextDouble();
         if (payment > totalBalance) {
             System.out.println("The amount you have entered exceeds your balance. Please try again");
             System.out.println("Enter your payment: $");

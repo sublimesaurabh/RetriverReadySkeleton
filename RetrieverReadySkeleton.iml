@@ -11,6 +11,8 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Maven: javax.activation:activation:1.1.1" level="project" />
+    <orderEntry type="library" name="Maven: javax.mail:javax.mail-api:1.5.4" level="project" />
     <orderEntry type="module-library">
       <library>
         <CLASSES>
@@ -29,7 +31,5 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" exported="" name="Maven: javax.activation:activation:1.1.1" level="project" />
-    <orderEntry type="library" exported="" name="Maven: javax.mail:javax.mail-api:1.5.4" level="project" />
   </component>
 </module>

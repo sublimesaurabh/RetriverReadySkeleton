@@ -15,7 +15,9 @@ import java.util.regex.Pattern;
 /**
  * This is java mail class that sends an email to the user
  *
- * We use Regex for email validation, and smtp for sending the email.
+ * Maven POM.xml file is used for dependency management.
+ * We use JavaMail API to send the email.
+ * We also use activation jar for activation of the email.
  *
  * @author Saurabh Chapagain
  * @version 1.0
@@ -25,6 +27,13 @@ import java.util.regex.Pattern;
  */
 
 public class JavaMail {
+
+    /**
+     * This is the email validation method that checks if the email is valid or not
+     * I used a regular expression (regex) to check if the email is valid or not
+     *
+     * @param email
+     */
 
     public void emailValidation(String email){
         //regular expression to check if email is valid
@@ -49,6 +58,10 @@ public class JavaMail {
         }
     }
 
+    /**
+     * This method is used to ask if the user wants an email or not
+     */
+
     //method to ask user if they want to email or not
     public static void wantEmail(){
         Scanner scanner = new Scanner(System.in);
@@ -66,7 +79,11 @@ public class JavaMail {
         }
     }
 
-    //method to send email
+    /**
+     * This method is used to send the email to the user using Simple Mail Transfer Protocol
+     *
+     */
+
     public static void sendEmail() {
         Properties props = new Properties();
         props.put("mail.smtp.host", "smtp.gmail.com");
@@ -102,7 +119,12 @@ public class JavaMail {
                 throw new RuntimeException(e);}
         }
 
-        //password for email, protected so that it cannot be used by other classes
+   /**
+     * This method is used to return the password of the account i am using to send the email
+    *
+    *
+    * @return password
+    */
         protected static String password(){
         return "#'retriever.xready#";
         }
