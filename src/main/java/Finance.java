@@ -5,7 +5,7 @@
 import java.util.Scanner;
 
 /**
- * This is the PaysBills class that allows Student to pay their bills.
+ * This is the Finance class that allows Student to pay their bills.
  *
  * It is the child class of the StudentInformation class.
  *
@@ -16,7 +16,7 @@ import java.util.Scanner;
  *
  */
 
-public class PayBills extends StudentInformation{
+public class Finance extends StudentInformation{
 
     protected static double totalBalance;
     protected static double totalPayment;

@@ -1,4 +1,3 @@
-
 // By Saurabh Chapagain
 // s205@umbc.edu
 
@@ -11,7 +10,7 @@ import java.util.Scanner;
  *
  * @author Saurabh Chapagain
  * @version 1.0
- * @see PayBills StudentEnroller JavaMails
+ * @see Finance StudentEnroller JavaMails
  *
  *
  */
@@ -155,31 +154,31 @@ public class StudentInformation {
         return courseNamesList;
     }
     /**
-     * This method returns information about the student
+     * This method returns first name
      */
     public String getFirstName() {
         return firstName;
     }
     /**
-     * This method returns information about the student
+     * This method returns user's last name
      */
     public String getLastName() {
         return lastName;
     }
     /**
-     * This method returns information about the student
+     * This method returns student ID
      */
     public String getStudentID() {
         return studentID;
     }
     /**
-     * This method returns information about the student
+     * This method returns student's email
      */
     public static String getStudentEmail() {
         return studentEmail;
     }
     /**
-     * This method returns information about the student
+     * This method returns student's grade year
      */
     public int getGradeYear() {
         return gradeYear;
@@ -211,8 +210,6 @@ public class StudentInformation {
 
     /**
      * This method shows the student's information
-     *
-     *
      */
         public static void showInfo () {
             System.out.println("Today is " + java.time.LocalDate.now());
@@ -221,7 +218,7 @@ public class StudentInformation {
             System.out.println("Student Email: " + studentEmail);
             System.out.println("Grade Year: " + gradeYear);
             System.out.println("Courses Enrolled: " + courseEnrolledName);
-            System.out.println("Total Balance: " + PayBills.totalBalance);
+            System.out.println("Total Balance: " + Finance.totalBalance);
         }
 
     /**
@@ -231,9 +228,9 @@ public class StudentInformation {
             return "Student Name: " + firstName + " " + lastName + "\n" +
                     "Student ID: " + studentID + "\n" +
                     "Student Email: " + studentEmail + "\n" +
-                    "Grade Year: " + gradeYear + "\n" +
+                    "Grade Year: " + getGradeYear() + "\n" +
                     "Courses Enrolled: " + "\n" + courseEnrolledName + "\n" +
-                    "Total Balance: " + PayBills.totalBalance;
+                    "Total Balance: " + Finance.totalBalance;
         }
     }
 

@@ -11,8 +11,8 @@
  * @version 1.0
  * @see StudentInformation
  * @see JavaMail
- * @see StudentEnroller
- * @see PayBills
+ * @see StudentEnrollment
+ * @see Finance
  *
  *
  */
@@ -20,10 +20,10 @@ public class RetrieverReady {
     public static void main(String[] args) {
         StudentInformation student = new StudentInformation();
         student.Student();
-        StudentEnroller se = new StudentEnroller();
+        StudentEnrollment se = new StudentEnrollment();
         se.enroll();
         student.getCourseNamesList();
-        PayBills pb = new PayBills();
+        Finance pb = new Finance();
         pb.viewBalance();
         pb.payBalance();
         pb.payBalance(pb.totalPayment);

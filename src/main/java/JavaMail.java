@@ -41,12 +41,12 @@ public class JavaMail {
         Pattern pattern = Pattern.compile(regex);
 
         StudentInformation si = new StudentInformation();
-        Scanner newemail = new Scanner(System.in);
+        Scanner newEmail = new Scanner(System.in);
 
         if(!si.getStudentEmail().contains("@") || si.getStudentEmail() == null || si.getStudentEmail().isEmpty()){
             System.out.println("Invalid email address");
             System.out.println("Please enter a valid email address: ");
-            si.setStudentEmail(newemail.nextLine());
+            si.setStudentEmail(newEmail.nextLine());
         }
         else if(pattern.matcher(si.getStudentEmail()).matches()){
             System.out.println("Valid Email entered!");
@@ -54,7 +54,7 @@ public class JavaMail {
         else{
             System.out.println("Invalid Email entered!");
             System.out.println("Please enter a valid email address");
-            si.setStudentEmail(newemail.nextLine());
+            si.setStudentEmail(newEmail.nextLine());
         }
     }
 
