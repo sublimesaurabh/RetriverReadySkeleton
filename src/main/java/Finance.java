@@ -7,7 +7,7 @@ import java.util.Scanner;
 /**
  * This is the Finance class that allows Student to pay their bills.
  *
- * It is the kid class of the StudentInformation class.
+ * It is the child class of the StudentInformation class.
  *
  * @author Saurabh Chapagain
  * @version 1.0
