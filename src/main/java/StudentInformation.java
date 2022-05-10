@@ -232,7 +232,7 @@ public class StudentInformation {
                     "Student ID: " + studentID + "\n" +
                     "Student Email: " + studentEmail + "\n" +
                     "Grade Year: " + gradeYear + "\n" +
-                    "Courses Enrolled: " + courseEnrolledName + "\n" +
+                    "Courses Enrolled: " + "\n" + courseEnrolledName + "\n" +
                     "Total Balance: " + PayBills.totalBalance;
         }
     }

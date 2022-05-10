@@ -20,7 +20,7 @@ public class StudentEnroller extends StudentInformation {
 
     int numberOfCourses = 1;
     int courseNumberLimit = 7;
-    public static String courseEnrolledName;
+    //public String courseEnrolledName;
 
     public void setCourseEnrolledName(String courseEnrolledName) {
         this.courseEnrolledName = courseEnrolledName;
@@ -38,7 +38,6 @@ public class StudentEnroller extends StudentInformation {
         /*    TODO: Limit students to enroll in 7 courses, if they try to enroll in more than 7 courses, they will be prompted to get advisor approval
                Also, let user remove course from their list of courses
          */
-
         System.out.println("YOU CAN ONLY REGISTER FOR 7 CLASSES MAXIMUM");
         while (numberOfCourses <= courseNumberLimit) {
             Scanner in = new Scanner(System.in);
@@ -46,7 +45,7 @@ public class StudentEnroller extends StudentInformation {
             String courseName = in.nextLine();
             if (!courseName.equals("q")) {
                 numberOfCourses++;
-                courseEnrolledName = courseEnrolledName + courseName;
+                courseEnrolledName = courseName + "\n" + courseEnrolledName;
                 PayBills.totalBalance = PayBills.totalBalance + courseCost;
             } else {
                 break;
