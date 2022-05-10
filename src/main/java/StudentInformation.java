@@ -19,7 +19,7 @@ public class StudentInformation {
     protected static String[] courseNamesList = new String[6];
     private static String firstName;
     private static String lastName;
-    static String courseEnrolledName;
+    public static String courseEnrolledName = "";
     private static String studentID;
     private static String studentEmail;
     private static int gradeYear;
@@ -211,7 +211,7 @@ public class StudentInformation {
     /**
      * This method shows the student's information
      */
-        public static void showInfo () {
+    protected static void showInfo () {
             System.out.println("Today is " + java.time.LocalDate.now());
             System.out.println("Student Name: " + firstName + " " + lastName);
             System.out.println("Student ID: " + studentID);
@@ -224,7 +224,7 @@ public class StudentInformation {
     /**
      * This method returns information about the student
      */
-        public String getInfo (){
+    protected String getInfo(){
             return "Student Name: " + firstName + " " + lastName + "\n" +
                     "Student ID: " + studentID + "\n" +
                     "Student Email: " + studentEmail + "\n" +
