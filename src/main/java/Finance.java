@@ -9,7 +9,7 @@ import java.util.Scanner;
  *
  * It is the child class of the StudentInformation class.
  *
- * @date May 3, 2022
+ *
  * @author Saurabh Chapagain
  * @version 1.0
  * @see RetrieverReady
@@ -22,21 +22,6 @@ public class Finance extends StudentInformation{
     protected static double totalBalance;
     protected static double totalPayment;
 
-    public void setTotalBalance(double totalBalance) {
-        this.totalBalance = totalBalance;
-    }
-
-    public double getTotalBalance() {
-        return totalBalance;
-    }
-
-    public double getCourseCost() {
-        return courseCost;
-    }
-
-    public double getCourseCostFullTime() {
-        return courseCostFullTime;
-    }
 
     /**
      * This is the viewBalance method which allows the user to view their balance.
@@ -57,7 +42,7 @@ public class Finance extends StudentInformation{
      * This is the payBalance method with parameters which allows the user to pay their bills.
      * If the amount is greater than the balance, it will print an error message and ask the user to pay again.
      *
-     * @param payment
+     * @param payment intializes the payment variable
      */
     public void payBalance (double payment) {
         Scanner input = new Scanner(System.in);

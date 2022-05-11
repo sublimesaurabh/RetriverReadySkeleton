@@ -7,7 +7,6 @@
  *
  * we make objects of the other classes and call the methods
  *
- * @date April 7, 2022
  * @author Saurabh Chapagain
  * @version 1.0
  * @see StudentInformation

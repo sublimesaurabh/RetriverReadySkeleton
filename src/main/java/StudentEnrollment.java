@@ -9,7 +9,7 @@ import java.util.Scanner;
  * This is StudentEnroller class that enrolls students into courses.
  *
  * It is the child class of StudentInformation
- * @date May 3, 2022
+ *
  * @author Saurabh Chapagain
  * @version 1.0
  * @see StudentInformation
@@ -21,29 +21,29 @@ public class StudentEnrollment extends StudentInformation {
     int numberOfCourses = 1;
     final int COURSE_NUMBER_LIMIT = 7;
 
-    /**
-     * This is the constructor of StudentEnrollment class.
-     * @param courseEnrolledName
-     */
-    public void setCourseEnrolledName(String courseEnrolledName) {
-        this.courseEnrolledName = courseEnrolledName;
-    }
+//    /**
+//     * This is the constructor of StudentEnrollment class.
+//     * @param courseEnrolledName - list of courses enrolled names
+//     */
+//    public void setCourseEnrolledName(String courseEnrolledName) {
+//        this.courseEnrolledName = courseEnrolledName;
+//    }
+//
+//    /**
+//     * This method displays the list of courses that the student has enrolled in.
+//     * @return courseEnrolledName
+//     */
+//    public String getCourseEnrolledName() {
+//        return courseEnrolledName;
+//    }
 
-    /**
-     * This method displays the list of courses that the student has enrolled in.
-     * @return courseEnrolledName
-     */
-    public String getCourseEnrolledName() {
-        return courseEnrolledName;
-    }
-
-    /**
-     * This method displays the list of courses that the student has enrolled in.
-     * @param courseNamesList
-     */
-    public void setCourseNamesList(String[] courseNamesList) {
-        this.courseNamesList = courseNamesList;
-    }
+//    /**
+//     * This method displays the list of courses that the student has enrolled in.
+//     * @param courseNamesList - list of courses
+//     */
+//    public void setCourseNamesList(String[] courseNamesList) {
+//        this.courseNamesList = courseNamesList;
+//    }
 
     /**
      * This method enrolls students into courses.
@@ -68,22 +68,22 @@ public class StudentEnrollment extends StudentInformation {
         }
         //TODO: Implement this.
 //
-        removeCourse();
+//        removeCourse();
     }
      //TODO: Implement this method
     // TODO: Make this method work
-    public void removeCourse() {
-        Scanner in = new Scanner(System.in);
-        System.out.println("You have registered for the following classes: " + courseEnrolledName);
-        System.out.println("Do you want to remove any class? (y/n)");
-        String remove = in.nextLine();
-        System.out.print("Please Enter Which class you want to remove: ");
-        String courseName = in.nextLine();
-        if (courseName.equals(courseEnrolledName)) {
-            courseEnrolledName = "";
-            numberOfCourses--;
-            courseEnrolledName = courseEnrolledName.replace(courseName,  null);
-            Finance.totalBalance = Finance.totalBalance - courseCost;
-        }
-    }
+//    public void removeCourse() {
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("You have registered for the following classes: " + courseEnrolledName);
+//        System.out.println("Do you want to remove any class? (y/n)");
+//        String remove = in.nextLine();
+//        System.out.print("Please Enter Which class you want to remove: ");
+//        String courseName = in.nextLine();
+//        if (courseName.equals(courseEnrolledName)) {
+//            courseEnrolledName = "";
+//            numberOfCourses--;
+//            courseEnrolledName = courseEnrolledName.replace(courseName,  null);
+//            Finance.totalBalance = Finance.totalBalance - courseCost;
+//        }
+//    }
 }

@@ -20,7 +20,6 @@ import java.util.regex.Pattern;
  * We also use activation jar for activation of the email.
  * Simple Mail Transfer Protocol is used to send the email.
  *
- * @date April, 26 2022
  * @author Saurabh Chapagain
  * @version 1.0
  * @see <a href="https://www.javatpoint.com/java-mail">JavaMail</a> , RetrieverReady
@@ -34,7 +33,7 @@ public class JavaMail {
      * This is the email validation method that checks if the email is valid or not
      * I used a regular expression (regex) to check if the email is valid or not
      *
-     * @param email
+     * @param email initial email
      */
 
     public void emailValidation(String email){
