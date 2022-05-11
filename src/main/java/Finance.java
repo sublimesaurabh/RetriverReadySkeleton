@@ -9,6 +9,7 @@ import java.util.Scanner;
  *
  * It is the child class of the StudentInformation class.
  *
+ * @date May 3, 2022
  * @author Saurabh Chapagain
  * @version 1.0
  * @see RetrieverReady

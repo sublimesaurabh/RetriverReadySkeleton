@@ -5,12 +5,13 @@ import java.util.Scanner;
 
 /**
  * This is StudentInformation class that collects student information
+ * It is the parent class of StudentEnrollment and Finance classes
  *
- * It is the parent class of StudentEnroller anmd PaysBills classes
- *
+ * @date May 3, 2022
  * @author Saurabh Chapagain
  * @version 1.0
- * @see Finance StudentEnroller JavaMails
+ * @see Finance
+ * @see StudentEnrollment
  *
  *
  */
@@ -35,25 +36,6 @@ public class StudentInformation {
      - In State students are charged differently, than out-of-state students
     */
 
-    /**
-     * This is the constructor of the class StudentInformation
-     *
-     * @param firstName
-     * @param lastName
-     * @param studentID
-     * @param studentEmail
-     * @param gradeYear
-     * @param courseEnrolledName
-     */
-    public StudentInformation(String firstName, String lastName, String studentID, String studentEmail, int gradeYear, String courseEnrolledName) {
-        super();
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.studentID = studentID;
-        this.studentEmail = studentEmail;
-        this.gradeYear = gradeYear;
-        this.courseEnrolledName = courseEnrolledName;
-    }
     /**
      * This is the default constructor of the class StudentInformation
      *
@@ -91,7 +73,6 @@ public class StudentInformation {
         this.lastName = userInput.nextLine();
         this.lastName = lastName.substring(0, 1).toUpperCase() + lastName.substring(1);;
 
-
         System.out.println("Hello, " + this.firstName + " " + this.lastName);
 
         System.out.println("Please enter your UMBC email: ");
@@ -109,79 +90,89 @@ public class StudentInformation {
         this.studentID = userInput.nextLine();
     }
     /**
-     * This method returns information about the student
+     * This method sets student first name
      */
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
     /**
-     * This method returns information about the student
+     * This method sets student last name
      */
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
     /**
-     * This method returns information about the student
+     * This method sets student ID
      */
     public void setStudentID(String studentID) {
         this.studentID = studentID;
     }
     /**
-     * This method returns information about the student
+     * This method sets student email
+     * @param studentEmail
      */
     public void setStudentEmail(String studentEmail) {
         this.studentEmail = studentEmail;
     }
     /**
-     * This method returns information about the student
+     * This method sets student grade year
+     * @param gradeYear
      */
     public void setGradeYear(int gradeYear) {
         this.gradeYear = gradeYear;
     }
     /**
-     * This method returns information about the student
+     * This method sets Course cost
+     * @param courseCost
      */
     public void setCourseCost(double courseCost) {
         this.courseCost = courseCost;
     }
     /**
-     * This method returns information about the student
+     * This method sets Course cost full time
+     * @param courseCostFullTime
      */
     public void setCourseCostFullTime(double courseCostFullTime) {
         this.courseCostFullTime = courseCostFullTime;
     }
     /**
-     * This method returns information about the student
+     * This method getCourseNamesList
+     * @return courseNamesList
      */
     public String[] getCourseNamesList() {
         return courseNamesList;
     }
     /**
      * This method returns first name
+     * @return firstName
      */
     public String getFirstName() {
         return firstName;
     }
     /**
      * This method returns user's last name
+     * @return lastName
      */
     public String getLastName() {
         return lastName;
     }
     /**
      * This method returns student ID
+     * @return studentID
      */
     public String getStudentID() {
         return studentID;
     }
     /**
      * This method returns student's email
+     * @return studentEmail
      */
     public static String getStudentEmail() {
         return studentEmail;
     }
     /**
      * This method returns student's grade year
+     * @return gradeYear
      */
     public int getGradeYear() {
         return gradeYear;
@@ -226,6 +217,7 @@ public class StudentInformation {
 
     /**
      * This method returns information about the student
+     * @return info
      */
     protected String getInfo(){
             return "Student Name: " + firstName + " " + lastName + "\n" +

@@ -18,7 +18,9 @@ import java.util.regex.Pattern;
  * Maven POM.xml file is used for dependency management.
  * We use JavaMail API to send the email.
  * We also use activation jar for activation of the email.
+ * Simple Mail Transfer Protocol is used to send the email.
  *
+ * @date April, 26 2022
  * @author Saurabh Chapagain
  * @version 1.0
  * @see <a href="https://www.javatpoint.com/java-mail">JavaMail</a> , RetrieverReady
