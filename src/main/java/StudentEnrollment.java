@@ -36,7 +36,7 @@ public class StudentEnrollment extends StudentInformation {
      *
      */
     public void enroll() {
-        System.out.println("Hello " + super.getStudentName() + "!, get ready to enroll in courses!");
+        System.out.println("Hello " + super.getStudentName() + " Get ready to enroll in courses!");
         System.out.println("YOU CAN ONLY REGISTER FOR 7 CLASSES MAXIMUM");
         while (numberOfCourses <= COURSE_NUMBER_LIMIT) {
             Scanner in = new Scanner(System.in);
@@ -80,6 +80,7 @@ public class StudentEnrollment extends StudentInformation {
         Scanner in = new Scanner(System.in);
         System.out.println("Do you like UMBC?");
         System.out.println(options[0] + " or " + options[1]);
+        System.out.println("Enter your Answer: ");
         String answer = in.nextLine();
         System.out.println("Thank you for your feedback!");
     }
