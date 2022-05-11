@@ -6,7 +6,7 @@ import java.util.Scanner;
 /**
  * This is StudentInformation class that collects student information
  * It is the parent class of StudentEnrollment and Finance classes
- *
+ * Commented out code is for Future IS 247 project, which will expand upon this project, by having a database and a UI (javaFX)
  *
  * @author Saurabh Chapagain
  * @version 1.0
@@ -17,7 +17,6 @@ import java.util.Scanner;
  */
 
 public class StudentInformation {
-    protected static String[] courseNamesList = new String[6];
     private static String firstName;
     private static String lastName;
     public static String courseEnrolledName = "";
@@ -25,16 +24,9 @@ public class StudentInformation {
     private static String studentEmail;
     private static int gradeYear;
     static double courseCost = 1104.00;
-    static double courseCostFullTime = 4439.00;
-    final private int FULL_TIME_COST = 6309;
-
-   /*TODO: 4/7/22
-    Course Cost needs to be expanded upon
-     - Full time and Part time students are charged different
-     - Limit students to only enroll in 7 courses, if they try to enroll more
-     they need permission from advisor
-     - In State students are charged differently, than out-of-state students
-    */
+    // Commented attributes will be used for IS247 project
+    // static double courseCostFullTime = 4439.00;
+    // final private int FULL_TIME_COST = 6309;
 
     /**
      * This is the default constructor of the class StudentInformation
@@ -139,20 +131,21 @@ public class StudentInformation {
      * This method getCourseNamesList
      * @return courseNamesList
      */
-    public String[] getCourseNamesList() {
-        return courseNamesList;
+//    public String[] getCourseNamesList() {
+//        return courseNamesList;
+//    }
+
+
+    /**
+     * This method getCourseNamesList
+     * @return getStudentName
+     *
+     */
+    public String getStudentName() {
+        return firstName + " " + lastName;
     }
 
-//    public String getFirstName() {
-//        return firstName;
-//    }
-//    /**
-//     * This method returns user's last name
-//     * @return lastName
-//     */
-//    public String getLastName() {
-//        return lastName;
-//    }
+
 //    /**
 //     * This method returns student ID
 //     * @return studentID
@@ -160,10 +153,10 @@ public class StudentInformation {
 //    public String getStudentID() {
 //        return studentID;
 //    }
-//    /**
-//     * This method returns student's email
-//     * @return studentEmail
-//     */
+    /**
+     * This method returns student's email
+     * @return studentEmail
+     */
     public static String getStudentEmail() {
         return studentEmail;
     }

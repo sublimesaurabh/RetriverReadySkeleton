@@ -22,13 +22,13 @@ public class RetrieverReady {
         student.Student();
         StudentEnrollment se = new StudentEnrollment();
         se.enroll();
-        student.getCourseNamesList();
         Finance pb = new Finance();
         pb.viewBalance();
         pb.payBalance();
         pb.payBalance(pb.totalPayment);
         student.userYear(student.getGradeYear());
         student.showInfo();
+        se.userFeedback();
         JavaMail.wantEmail();
     }
 }
